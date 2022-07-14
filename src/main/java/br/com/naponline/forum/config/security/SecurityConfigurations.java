@@ -45,6 +45,7 @@ public class SecurityConfigurations {
         .antMatchers(HttpMethod.GET, "/topicos/*").permitAll()
         .antMatchers(HttpMethod.POST, "/auth").permitAll()
         .antMatchers(HttpMethod.GET, "/actuator/**").permitAll()
+        .antMatchers(HttpMethod.DELETE, "/topicos/*").hasRole("MODERADOR")
         .antMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
         .anyRequest().authenticated()
         .and().csrf().disable()
