@@ -23,12 +23,15 @@ public class TopicoDto {
 	public Long getId() {
 		return id;
 	}
+	
 	public String getTitulo() {
 		return titulo;
 	}
+	
 	public String getMensagem() {
 		return mensagem;
 	}
+	
 	public LocalDateTime getDataCriacao() {
 		return dataCriacao;
 	}
@@ -36,6 +39,5 @@ public class TopicoDto {
 	public static Page<TopicoDto> converter(Page<Topico> topicos) {
 		return topicos.map(TopicoDto::new);
 	}
-	
 	
 }

@@ -88,8 +88,6 @@ public class Usuario implements UserDetails {
 		this.senha = senha;
 	}
 
-	
-	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		return this.perfis;

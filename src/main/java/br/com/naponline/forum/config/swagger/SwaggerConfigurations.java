@@ -24,8 +24,8 @@ public class SwaggerConfigurations {
         .description("SpringShop Wiki Documentation")
         .url("https://springshop.wiki.github.org/docs"))
         .components(new Components()
-          .addSecuritySchemes("bearer-key",
-          new SecurityScheme().type(SecurityScheme.Type.HTTP).scheme("bearer").in(SecurityScheme.In.HEADER).bearerFormat("JWT")));
+        .addSecuritySchemes("bearer-key",
+        		new SecurityScheme().type(SecurityScheme.Type.HTTP).scheme("bearer").in(SecurityScheme.In.HEADER).bearerFormat("JWT")));
     }
  
 }
