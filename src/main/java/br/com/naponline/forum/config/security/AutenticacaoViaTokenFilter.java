@@ -20,7 +20,6 @@ public class AutenticacaoViaTokenFilter extends OncePerRequestFilter{
 	
 	private UsuarioRepository usuarioRepository;
 
-	
 	public AutenticacaoViaTokenFilter(TokenService tokenService, UsuarioRepository usuarioRepository) {
 		this.tokenService = tokenService;
 		this.usuarioRepository = usuarioRepository;
@@ -43,7 +42,6 @@ public class AutenticacaoViaTokenFilter extends OncePerRequestFilter{
 		Usuario usuario = usuarioRepository.findById(idUsuario).get();
 		UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(usuario, null, usuario.getAuthorities());
 		SecurityContextHolder.getContext().setAuthentication(authentication);
-		
 	}
 
 	private String recuperarToken(HttpServletRequest request) {
