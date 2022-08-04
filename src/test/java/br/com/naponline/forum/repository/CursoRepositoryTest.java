@@ -25,7 +25,7 @@ class CursoRepositoryTest {
 	private TestEntityManager em;
 
 	@Test
-	public void deveriaCarregarUmCursoPeloNome() {
+	public void deveriaCarregarUmCursoAoBuscarPeloNome() {
 		String nomeCurso = "CSS 3";
 
 		Curso css3 = new Curso();
@@ -39,7 +39,7 @@ class CursoRepositoryTest {
 	}
 
 	@Test
-	public void naoDeveriaCarregarUmCursoPeloNome() {
+	public void naoDeveriaCarregarUmCursoCujoNomeNaoEstejaCadastrado() {
 		String nomeCurso = "HTML 5";
 		Curso curso = repository.findByNome(nomeCurso);
 		Assertions.assertNull(curso);
