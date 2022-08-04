@@ -20,7 +20,7 @@ import br.com.naponline.forum.repository.UsuarioRepository;
 
 @EnableWebSecurity
 @Configuration
-@Profile("prod")
+@Profile(value = {"prod", "test"})
 public class SecurityConfigurations {
 	
 	@Autowired

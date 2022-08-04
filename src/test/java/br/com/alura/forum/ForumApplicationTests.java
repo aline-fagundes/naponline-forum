@@ -1,13 +1,16 @@
 package br.com.alura.forum;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-@SpringBootTest
-class ForumApplicationTests {
+@ExtendWith(SpringExtension.class)
+public class ForumApplicationTests {
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
+		Assertions.assertTrue(true);
 	}
 
 }
